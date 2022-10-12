@@ -83,7 +83,3 @@ time.sleep(5)
 okbtn = driver.find_element(By.XPATH, "//button[normalize-space()='OK']").click()
 
 driver.quit()
-
-
-#driver.find_element(By.LINK_TEXT, "Samsung galaxy s6").click()
-#homae_menu = driver.find_element(By.XPATH, "//*[@id='navbarExample']/ul/li[1]/a").click()
