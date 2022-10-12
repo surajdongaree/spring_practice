@@ -9,7 +9,7 @@ import time
 
 
 serv_obj = Service("C:\\DRIVERS\\chromedriver_win32\\chromedriver.exe")
-driver = webdriver.Chrome()
+driver = webdriver.Chrome(service=serv_obj)
 driver.get("https://demoblaze.com/index.html")
 
 driver.maximize_window()
