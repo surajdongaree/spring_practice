@@ -28,7 +28,7 @@ phone = driver.find_element(By.XPATH, "//div[@class='list-group']/a[2]").click()
 # add samsung phone
 samsungPhone = driver.find_element(By.XPATH, "//*[@id='tbodyid']/div[1]/div/div/h4/a").click()
 addcart = driver.find_element(By.XPATH, "//*[@id='tbodyid']/div[2]/div/a").click()
-time.sleep(5)
+time.sleep(10)
 Alert(driver).accept()
 
 # add laptop
@@ -97,10 +97,10 @@ time.sleep(5)
 purchase = driver.find_element(By.XPATH, "//*[@id='orderModal']/div/div/div[3]/button[2]").click()
 time.sleep(5)
 
-#ids = driver.find_element(By.XPATH, "/html/body/div[10]/p/text()[1]").click()
-#print(ids)
+
 time.sleep(5)
 okbtn = driver.find_element(By.XPATH, "//button[normalize-space()='OK']").click()
 
 driver.quit()
+
 
