@@ -59,8 +59,8 @@ print('total order:', len(totalOrder))
 
 
 text_name = [el.text for el in driver.find_elements(By.XPATH, "//*[@id='tbodyid']/tr/td[3]")]
-
-print("sorted list:", text_name)
+text_name1 = sorted(text_name)
+print("sorted list:", text_name1)
 
 text_contents = [el.text for el in driver.find_elements(By.XPATH, "//*[@id='tbodyid']/tr/td[3]")]
 
@@ -85,11 +85,12 @@ else:
 print("Sum of all elements in given list: ", total)
 
 # place order
-driver.find_element(By.XPATH, "//*[@id='page-wrapper']/div/div[2]/button").click()
+placeOrder = driver.find_element(By.XPATH, "//*[@id='page-wrapper']/div/div[2]/button").click()
 
 name = driver.find_element(By.ID, "name").send_keys("suraj")
 country = driver.find_element(By.ID, "country").send_keys("india")
 city = driver.find_element(By.ID, "city").send_keys("pune")
+time.sleep(3)
 creditCart = driver.find_element(By.ID, "card").send_keys("123489")
 month = driver.find_element(By.ID, "month").send_keys("april")
 year = driver.find_element(By.ID, "year").send_keys("2022")
@@ -97,10 +98,12 @@ time.sleep(5)
 purchase = driver.find_element(By.XPATH, "//*[@id='orderModal']/div/div/div[3]/button[2]").click()
 time.sleep(5)
 
+ids = driver.find_element(By.XPATH, "/html/body/div[10]/p").text
+print("item information:", ids)
+
 
 time.sleep(5)
 okbtn = driver.find_element(By.XPATH, "//button[normalize-space()='OK']").click()
 
 driver.quit()
-
 
